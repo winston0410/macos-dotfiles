@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "adoptopenjdk/openjdk"
+cask "flutter"
+cask "brave-browser"
+cask "alacritty"
+cask "adoptopenjdk8"
+cask 'android-ndk'
+cask 'android-platform-tools'
+cask 'android-sdk'
+brew "neovim"
+brew "cocoapods"
