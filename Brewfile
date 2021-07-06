@@ -9,5 +9,7 @@ cask "adoptopenjdk8"
 cask 'android-ndk'
 cask 'android-platform-tools'
 cask 'android-sdk'
-brew "neovim"
+cask 'drawio'
 brew "cocoapods"
+# Since postgresql cannot be installed with nix
+brew "postgresql"
