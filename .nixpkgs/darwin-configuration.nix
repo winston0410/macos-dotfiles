@@ -21,6 +21,7 @@
     ripgrep
     exa
     neovim
+    nodejs-16_x
     git
     tmux
     tmuxp
@@ -28,8 +29,8 @@
     lorri
     direnv
     # Linter and LSP
+    dhall
     # Go packages to be built
-
     (buildGoModule rec {
       pname = "sqls";
       version = "0.2.18";
@@ -66,17 +67,17 @@
       vendorSha256 = "1whifjmdl72kkcb22h9b1zadsrc80prrjiyvyba2n5vb4kavximm";
     })
 
-    (buildGoModule rec {
-      pname = "sqlfmt";
-      version = "0.1.0";
-      src = fetchFromGitHub {
-        owner = "kanmu";
-        repo = "go-sqlfmt";
-        rev = "d1e63e2ee5eb36cbbc28c9d9471ab05786b5dae7";
-        sha256 = "183vm65wb7byijy9i9ng48ky4ajk9czlz5zsfk4sg5igdkwl7mz0";
-      };
-      vendorSha256 = "1whifjmdl72kkcb22h9b1zadsrc80prrjiyvyba2n5vb4kavximm";
-    })
+    # (buildGoModule rec {
+      # pname = "sqlfmt";
+      # version = "0.1.0";
+      # src = fetchFromGitHub {
+        # owner = "kanmu";
+        # repo = "go-sqlfmt";
+        # rev = "d1e63e2ee5eb36cbbc28c9d9471ab05786b5dae7";
+        # sha256 = "183vm65wb7byijy9i9ng48ky4ajk9czlz5zsfk4sg5igdkwl7mz0";
+      # };
+      # vendorSha256 = "1whifjmdl72kkcb22h9b1zadsrc80prrjiyvyba2n5vb4kavximm";
+    # })
     # metals
     # ktlint
     # cmake-language-server
@@ -109,8 +110,20 @@
     nodePackages.typescript-language-server
     # nodePackages.pyright
     nodePackages.svelte-language-server
+    nodePackages.svelte-check
+    nodePackages.vscode-langservers-extracted
+    nodePackages.elm-format
+    nodePackages.graphql-language-service-cli
+#     nodePackages.prettier
+    nodePackages."@angular/language-server"
+    nodePackages."@prisma/language-server"
+    nodePackages.npm-package-json-lint
+    nodePackages.prettier_d_slim
+    nodePackages."@prettier/plugin-pug"
+    nodePackages."@prettier/plugin-xml"
+    nodePackages.prettier-plugin-svelte
+    nodePackages.prettier-plugin-toml
     nodePackages.purty
-    nodePackages.prettier
     haskellPackages.hindent
     haskellPackages.dhall-lsp-server
   ];
