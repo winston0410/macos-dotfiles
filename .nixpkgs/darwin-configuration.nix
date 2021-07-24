@@ -92,6 +92,7 @@
     rnix-lsp
     ccls
     haskell-language-server
+    vala-language-server
     # python39Packages.black
     # python39Packages.flake8
     # python39Packages.yamllint
@@ -124,6 +125,7 @@
     nodePackages.prettier-plugin-svelte
     nodePackages.prettier-plugin-toml
     nodePackages.purty
+    ktlint
     haskellPackages.hindent
     haskellPackages.dhall-lsp-server
   ];
