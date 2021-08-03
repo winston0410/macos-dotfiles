@@ -2,12 +2,12 @@
 
 {
 
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url =
-        "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-    }))
-  ];
+  # nixpkgs.overlays = [
+    # (import (builtins.fetchTarball {
+      # url =
+        # "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
+    # }))
+  # ];
 
   nixpkgs.config = {
     allowUnfree = true;
@@ -92,7 +92,7 @@
     rnix-lsp
     ccls
     haskell-language-server
-    vala-language-server
+    # vala-language-server
     # python39Packages.black
     # python39Packages.flake8
     # python39Packages.yamllint
@@ -111,23 +111,29 @@
     nodePackages.typescript-language-server
     # nodePackages.pyright
     nodePackages.svelte-language-server
-    nodePackages.svelte-check
-    nodePackages.vscode-langservers-extracted
-    nodePackages.elm-format
-    nodePackages.graphql-language-service-cli
+    # nodePackages.svelte-check
+    # nodePackages.vscode-langservers-extracted
+    # nodePackages.elm-format
+    # nodePackages.graphql-language-service-cli
 #     nodePackages.prettier
-    nodePackages."@angular/language-server"
-    nodePackages."@prisma/language-server"
-    nodePackages.npm-package-json-lint
-    nodePackages.prettier_d_slim
-    nodePackages."@prettier/plugin-pug"
-    nodePackages."@prettier/plugin-xml"
-    nodePackages.prettier-plugin-svelte
-    nodePackages.prettier-plugin-toml
+    # nodePackages."@angular/language-server"
+    # nodePackages."@prisma/language-server"
+    # nodePackages.npm-package-json-lint
+    # nodePackages.prettier_d_slim
+    # nodePackages."@prettier/plugin-pug"
+    # nodePackages."@prettier/plugin-xml"
+    # nodePackages.prettier-plugin-svelte
+    # nodePackages.prettier-plugin-toml
     nodePackages.purty
     ktlint
     haskellPackages.hindent
     haskellPackages.dhall-lsp-server
+    # Cannot be installed right now due to this issue:
+    # https://github.com/LnL7/nix-darwin/issues/320
+    # jdk8
+    maven
+    gradle
+    # solargraph
   ];
 
   # programs.fish = {
